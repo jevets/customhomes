@@ -3,9 +3,16 @@ extends /layouts/html
 block styles
   link(
     rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
+  )
+  link(
+    rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"
   )
   style.
+    .font-sans {
+      font-family: 'Lato', sans-serif;
+    }
     body {
       color: white;
       background: rgb(24, 46, 82);
@@ -18,10 +25,11 @@ block styles
     }
 
 block body
-  block header
-    include /layouts/_header
-  main
-    block main
-      | !{ content }
-  block footer
-    include /layouts/_footer
+  .font-sans
+    block header
+      include /layouts/_header
+    main
+      block main
+        | !{ content }
+    block footer
+      include /layouts/_footer
