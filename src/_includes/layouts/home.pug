@@ -1,0 +1,8 @@
+extends /layouts/main
+
+block main
+  .container.mx-auto.px-4
+    .my-4
+      p.my-4 #{ site.title }
+      p.my-4
+        a(href=`tel:${company.phone}`) #{ company.phone }

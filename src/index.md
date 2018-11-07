@@ -1,5 +1,5 @@
 ---
 title: Home
-layout: /layouts/main.pug
+layout: /layouts/home.pug
 ---
 Custom Homes of Asheville, Inc.
