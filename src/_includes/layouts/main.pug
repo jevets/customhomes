@@ -1,0 +1,16 @@
+extends /layouts/html
+
+block styles
+  link(
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"
+  )
+
+block body
+  block header
+    include /layouts/_header
+  main
+    block main
+      | !{ content }
+  block footer
+    include /layouts/_footer
