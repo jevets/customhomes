@@ -2,7 +2,9 @@ extends /layouts/main
 
 block main
   .container.mx-auto.px-4
-    .my-4
-      p.my-4 #{ site.title }
-      p.my-4
-        a(href=`tel:${company.phone}`) #{ company.phone }
+    .my-4.text-center.max-w-sm.mx-auto
+      p.my-12.text-xl.leading-normal Whether you are interested in a brand new home, or just remodeling or adding onto your existing home, Custom Homes of Asheville, Inc. can provide the services you need, the quality you desire, and the honesty and integrity you deserve.
+      p.my-16.text-5xl.font-bold
+        a.no-underline(href=`tel:${company.phone}`) #{ company.phone }
+      p.my-8.text-sm
+        a(href=company.socials.facebook) Find us on Facebook
