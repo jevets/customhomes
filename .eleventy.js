@@ -1,3 +1,5 @@
+// const urlFor = require('./api').urlFor
+
 module.exports = config => {
   config.dir = {
     input: './src',

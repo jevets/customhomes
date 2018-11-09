@@ -7,7 +7,8 @@
     "dev": "yarn watch:html & yarn watch:css",
     "css": "./node_modules/.bin/tailwind build src/css/styles.css -c ./tailwind.js -o dist/css/styles.css",
     "watch:css": "watch 'yarn css' ./src/css",
-    "watch:html": "DEBUG=Eleventy* eleventy --serve"
+    "watch:html": "yarn serve",
+    "serve": "DEBUG=Eleventy* eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.5.4",

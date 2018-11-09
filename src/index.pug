@@ -1,6 +1,20 @@
 extends /layouts/main
 
 block main
+  .my-4.py-8.bg-grey-lightest.shadow-inner
+    +container()
+      each project in projects
+        h3.text-3xl.font-bold.my-16.text-center= project.title
+        div(class="md:px-2")
+          .flex.flex-wrap.justify-center(class="md:-mx-2")
+            each image in project.photos
+              .w-full.p-2(class="md:w-1/4")
+                a(href=site.urlFor(image).url())
+                  img.max-w-full(
+                    src=site.urlFor(image).width(480).sharpen(30).url()
+                    alt=(image.title || '')
+                  )
+
   .my-4.py-8.bg-blue-darkest.text-white.shadow-inner
     +container()
       include /home/about
