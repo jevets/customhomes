@@ -1,0 +1,16 @@
+@tailwind preflight;
+
+@tailwind components;
+
+body {
+  @apply font-sans;
+  @apply leading-normal;
+}
+a {
+  @apply text-blue-darker;
+}
+a:hover, a:focus, a:active {
+  @apply text-blue-dark;
+}
+
+@tailwind utilities;

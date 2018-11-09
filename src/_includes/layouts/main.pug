@@ -5,24 +5,13 @@ block styles
     rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
   )
-  link(
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"
-  )
-  style.
-    .font-sans {
-      font-family: 'Lato', sans-serif;
-    }
-    a {
-      color: rgb(30, 42, 83);
-    }
+  link(rel="stylesheet" href="/styles.css")
 
 block body
-  .font-sans
-    block header
-      include /layouts/_header
-    main
-      block main
-        | !{ content }
-    block footer
-      include /layouts/_footer
+  block header
+    include /layouts/_header
+  main
+    block main
+      | !{ content }
+  block footer
+    include /layouts/_footer

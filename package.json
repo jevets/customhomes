@@ -4,9 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "DEBUG=Eleventy* eleventy --serve",
+    "css:compile": "./node_modules/.bin/tailwind build src/styles.css -c ./tailwind.js -o dist/styles.css",
     "build": "eleventy"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.5.4"
+    "@11ty/eleventy": "^0.5.4",
+    "@sanity/client": "^0.135.3",
+    "@sanity/image-url": "^0.135.0",
+    "tailwindcss": "^0.7.2"
   }
 }
