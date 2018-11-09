@@ -3,14 +3,17 @@
   "description": "Static site for chofasheville.com",
   "private": true,
   "scripts": {
-    "dev": "DEBUG=Eleventy* eleventy --serve",
-    "css:compile": "./node_modules/.bin/tailwind build src/styles.css -c ./tailwind.js -o dist/styles.css",
-    "build": "eleventy"
+    "build": "eleventy && yarn css",
+    "dev": "yarn watch:html & yarn watch:css",
+    "css": "./node_modules/.bin/tailwind build src/css/styles.css -c ./tailwind.js -o dist/css/styles.css",
+    "watch:css": "watch 'yarn css' ./src/css",
+    "watch:html": "DEBUG=Eleventy* eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.5.4",
     "@sanity/client": "^0.135.3",
     "@sanity/image-url": "^0.135.0",
-    "tailwindcss": "^0.7.2"
+    "tailwindcss": "^0.7.2",
+    "watch": "^1.0.2"
   }
 }

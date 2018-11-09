@@ -4,6 +4,7 @@ module.exports = config => {
     output: './dist',
   }
 
+  config.addPassthroughCopy('src/robots.txt')
   config.addPassthroughCopy('src/img')
 
   return config

@@ -1,0 +1,73 @@
+@tailwind preflight;
+
+@tailwind components;
+
+body {
+  @apply font-sans;
+}
+a {
+  @apply text-blue-darker;
+}
+a:hover, a:focus, a:active {
+  @apply text-blue-dark;
+}
+h1, h2, h3, h4, h5, h6 {
+  @apply font-serif;
+  @apply font-light;
+  @apply uppercase;
+  @apply leading-tight;
+}
+
+/* Content */
+.content {
+  @apply leading-normal;
+}
+.content p {
+  @apply my-4;
+}
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  @apply my-4;
+}
+.content h1 {
+  @apply text-5xl;
+}
+.content h2 {
+  @apply text-3xl;
+}
+.content h3 {
+  @apply text-xl;
+}
+.content h4 {
+  @apply text-lg;
+}
+.content hr {
+  @apply border-t my-8;
+}
+.content blockquote {
+  @apply italic leading-loose;
+  @apply p-2 pl-4 border-l-4 border-grey bg-grey-lighter;
+}
+.content ul, .content ol {
+  @apply leading-loose;
+}
+.content table {
+  @apply w-full my-4;
+}
+.content table th {
+  @apply text-left;
+}
+.content table th,
+.content table td {
+  @apply p-2;
+}
+.content input,
+.content textarea {
+  @apply border p-2;
+}
+
+@tailwind utilities;
