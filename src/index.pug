@@ -1,7 +1,7 @@
 extends /layouts/main
 
 block main
-  .my-4.py-8.bg-grey-lightest.shadow-inner
+  .py-8.bg-grey-lightest.shadow-inner
     +container()
       each project in projects
         h3.text-3xl.font-bold.my-16.text-center= project.title
@@ -15,7 +15,7 @@ block main
                     alt=(image.title || '')
                   )
 
-  .my-4.py-8.bg-blue-darkest.text-white.shadow-inner
+  .py-32.bg-blue-darkest.text-white.shadow-inner
     +container()
       include /home/about
 

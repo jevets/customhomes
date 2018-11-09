@@ -1,2 +1,15 @@
-footer.siteinfo
-  //- p footer
+footer.siteinfo.py-16.bg-blue-darkest.text-white.text-center.text-sm
+  +container()
+    p.leading-loose
+      | &copy;#{ site.copyrightYear } #{ company.name }
+    p.leading-loose.my-8.text-xl
+      a.text-white.no-underline(
+        href=`tel:${company.phone}`
+        class="hover:text-blue-lighter underline"
+      )= company.phone
+    p.leading-loose.my-8.text-xs
+      a.text-white(
+        target="_blank"
+        href=company.socials.facebook
+        class="hover:text-blue-lighter no-underline"
+      ) Find us on Facebook
