@@ -4,7 +4,7 @@ const imageUrlBuilder = require('@sanity/image-url')
 const sanityClient = createClient({
   projectId: '5x38adbv',
   dataset: 'production',
-  useCdn: false,
+  useCdn: true,
 })
 
 exports.sanityClient = sanityClient
